@@ -1,8 +1,7 @@
-from createsql.transdoc import TransDoc
+from func.transdoc import TransDoc
+from conf.map_detail import *
 import sys
 import re
-
-test = TransDoc('dow2', 'DOW2')
 
 def parse_shellparams(shellinputs):
     params = shellinputs[1:]
@@ -14,3 +13,4 @@ def parse_shellparams(shellinputs):
         raise SyntaxError(f'please check your shellparams 【{others}】, example: 【python mytest.py {fit_param}】')
     return kwargs
 
+print(DOW2.appname)
