@@ -21,3 +21,5 @@ DOW2_PASSWORD = '260aXXAfe1LdM3fGKqFFstRlF7p69YhSYRxyQ3MWCSBzBdonFS9TXT4W9KDo5Bg
 # MODEL
 DOW2 = ProjectModel(appname='dow2', transdoc='DOW2', map_dict=DOW2_MAP, tadb_name=DOW2_DB, ta_url=DOW2_URL, ta_password=DOW2_PASSWORD)
 
+
+PROJECT = {DOW2.appname: DOW2}
