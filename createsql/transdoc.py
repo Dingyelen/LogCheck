@@ -25,15 +25,20 @@ class TransDoc:
     def __repr__(self) -> str:
         return f"TransDoc({self.appname})"
     
-    @property
-    def common_headers(self):
+    def load_transdoc(self):
         try:
             workbook = openpyxl.load_workbook(f'./LogCheck/transdoc/{self.appname}.xlsx')
             worksheet = workbook.active
-            common_headers = [cell.value for cell in worksheet[1] if cell.value is not None]
         except FileNotFoundError:
             raise FileNotFoundError('''please add the app's excel transdoc in the transdoc path and capitalize the alphabet!!!''')
-            
+
+        return worksheet
+    
+    @property
+    def common_headers(self):
+        worksheet = self.load_transdoc()
+        common_headers = [cell.value for cell in worksheet[1] if cell.value is not None]
+
         return common_headers
     
     @property
@@ -83,6 +88,10 @@ class TransDoc:
                 row_num += 1
                 if cell_value == event:
                     event_dict[event] = row_num
+
+        
+
+        
         return event_dict
         # attr_dict = {}
         # for event in event_name:
@@ -95,7 +104,7 @@ class TransDoc:
         
 if __name__ == '__main__':
     test = TransDoc('dow2')
-    print(test.event_attr)
+    print(test.common_headers)
     
 
 
