@@ -91,23 +91,9 @@ class TransDoc():
                 row_num += 1
                 if cell_value == event:
                     event_dict[event] = row_num
-
-        
-
         
         return event_dict
-        # attr_dict = {}
-        # for event in event_name:
-        #     for cell in worksheet.iter_rows(values_only=True):
-        #         print(event, cell.value)
-                # if cell.value == event:
-                #    print(cell.row)
-            
 
-        
-if __name__ == '__main__':
-    test = TransDoc('dow2')
-    print(test.common_headers)
     
 
 
