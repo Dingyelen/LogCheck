@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 import openpyxl
 import re
-import os
+
+from conf.model import ProjectModel
 
 
-class TransDoc:
+class TransDoc():
     '''
     property:
         common_headers -> list: 公共头
@@ -15,22 +16,24 @@ class TransDoc:
         event_attr_col -> int: 事件属性开始列
         event_attr -> dict
     '''
-    def __init__(self, appname) -> str:
+    def __init__(self, appname: str, transdoc: str) -> str:
         '''
         args:
             appname:项目名称
         '''
         self.appname = appname.upper()
-    
+        self.transdoc = transdoc
+
     def __repr__(self) -> str:
         return f"TransDoc({self.appname})"
     
     def load_transdoc(self):
         try:
-            workbook = openpyxl.load_workbook(f'./LogCheck/transdoc/{self.appname}.xlsx')
+            print(self.transdoc)
+            workbook = openpyxl.load_workbook(f'./transdoc/{self.transdoc}.xlsx')
             worksheet = workbook.active
         except FileNotFoundError:
-            raise FileNotFoundError('''please add the app's excel transdoc in the transdoc path and capitalize the alphabet!!!''')
+            raise FileNotFoundError('''please add the app's excel transdoc in the transdoc path and capitalize the alphabet{self.appname}!!!''')
 
         return worksheet
     
