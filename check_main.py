@@ -31,7 +31,7 @@ if __name__ == '__main__':
         sql = target.total_sql
     else:
         sql = target.null_sql
-    tadb = TaDB(target_pro.ta_url, target_pro.ta_url)
+    tadb = TaDB(target_pro.ta_url, target_pro.ta_password)
     rows, action, results = tadb.execute(sql)
 
-    print(rows, action, results)
+    print(results)
