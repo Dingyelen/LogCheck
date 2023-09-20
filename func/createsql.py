@@ -23,7 +23,7 @@ class CreateSQL:
     def total_sql(self):
         target_pro, target_event = self.get_projectmodel()
         
-        sql = f'''###
+        sql = f'''
         select a.{target_event[1]}, b."{target_event[2]}"
         from {target_pro.tadb_name} a
         left join {target_event[0]} b
@@ -32,7 +32,7 @@ class CreateSQL:
         and "$part_date" >= '{self.start_date}'
         and "$part_date" <= '{self.end_date}'
         group by 1, 2
-        ###
+        order by 1
         '''
         return sql
     
@@ -50,6 +50,6 @@ class CreateSQL:
         and "$part_date" <= '{self.end_date}'
         and b."{target_event[2]}" is null
         group by 1, 2
-        
+        order by 1
         '''
         return sql
