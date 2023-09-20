@@ -8,8 +8,8 @@ DOW2_MAP = {'PayFunel': ['ta_dim.dim_38_0_130723', 'icon_id', 'icon_id@icon_id']
             'Payment': ['ta_dim.dim_38_0_131279', 'payment_itemid', 'payment_itemid@goods_id']
             }
 
-DOW_MAP = {'AddGold': ['ta_dim.dim_9_0_95031', 'itemid', 'itemid@gold_name'], 
-           'CostGold': ['ta_dim.dim_9_0_95031', 'itemid', 'itemid@gold_name'],
+DOW_MAP = {'AddGold': ['ta_dim.dim_9_0_95031', 'itemid', 'itemid@id'], 
+           'CostGold': ['ta_dim.dim_9_0_95031', 'itemid', 'itemid@id'],
            'AddItem': ['ta_dim.dim_9_0_124717', 'itemid',  'item_id_detail.item_id@id'], 
            'CostItem': ['ta_dim.dim_9_0_124717', 'itemid',  'item_id_detail.item_id@id'], 
            'RecruitCard': ['ta_dim.dim_9_0_100730', 'recruitid', 'recruitid@id'], 
@@ -38,7 +38,7 @@ SEAEMPIRE_URL = URL
 
 # ta_password
 DOW2_PASSWORD = '260aXXAfe1LdM3fGKqFFstRlF7p69YhSYRxyQ3MWCSBzBdonFS9TXT4W9KDo5Bg1'
-DOW_PASSWORD = '260aXXAfe1LdM3fGKqFFstRlF7p69YhSYRxyQ3MWCSBzBdonFS9TXT4W9KDo5Bg1'
+DOW_PASSWORD = 'QCHTSdWhHlg286d41qKq7TP54TvFsfVLdGx4BXNvdSl4N8hymmMnmx1nwt0A0Tnm'
 SEAEMPIRE_PASSWORD = '07F9GuaBxkWQM26k1wsrITat3dwC551RxfxO12syQAL43Ll0NzvJVmBn0yFwMBOj'
 
 # MODEL
