@@ -29,7 +29,7 @@ if __name__ == '__main__':
     res_type = kwargs.get('res_type') if 'res_type' in kwargs else 'null'
 
     target = CreateSQL(appname=appname, event_name=event_name, start_date=start_date, end_date=end_date)
-    target_pro, target_event = target.get_projectmodel()
+    target_pro = target.get_projectmodel()
     if res_type == 'total':
         sql = target.total_sql
     else:
