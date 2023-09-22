@@ -1,7 +1,7 @@
 from conf.model import ProjectModel
 
 # map_dict
-DOW2_MAP = {'PayFunel': ['ta_dim.dim_38_0_130723', 'icon_id', 'icon_id@icon_id'], 
+DOW2_MAP = {'PayFunnel': ['ta_dim.dim_38_0_130723', 'icon_id', 'icon_id@icon_id'], 
             'GoldChange': ['ta_dim.dim_38_0_130833', 'gold_reason', 'gold_reason@gold_reason'], 
             'ItemChange': ['ta_dim.dim_38_0_130879', 'item_id', 'item_id@item_id'], 
             'Summon': ['ta_dim.dim_38_0_131028', 'summon_id', 'summon_id@summon_id'], 
@@ -16,7 +16,7 @@ DOW_MAP = {'AddGold': ['ta_dim.dim_9_0_95031', 'itemid', 'itemid@id'],
            'Payment': ['ta_dim.dim_9_0_95498', 'payment_itemid', 'payment_itemid@goodsid']
            }
 
-SEAEMPIRE_MAP = {'PayFunel': ['ta_dim.dim_38_0_130723', 'icon_id', 'icon_id@icon_id'], 
+SEAEMPIRE_MAP = {'PayFunnel': ['ta_dim.dim_38_0_130723', 'icon_id', 'icon_id@icon_id'], 
                  'CurrencyChange': ['ta_dim.dim_36_0_127730', 'currency_reason', 'item_reason@reason'], 
                  'ItemChange': ['ta_dim.dim_36_0_127718', 'item_id', 'item_id@item_id'], 
                  'Summon': ['ta_dim.dim_36_0_128199', 'summon_id', 'summon_id@summon_id'], 
